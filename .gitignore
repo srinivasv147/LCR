@@ -5,4 +5,4 @@
 *.pdf
 .gitignore~
 .DS_Store
-.pyc
+*.pyc
