@@ -1,9 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-A=1
-B=1#we assume the constants to be 1
-w=12#the value of natural frequency which we consider
-t=np.linspace(0,10,num=100)#the range of time values
+
 
 def current(A,B,w,t,eta):
 	outVal=-1*eta*w*t
@@ -17,3 +14,17 @@ def current(A,B,w,t,eta):
 		return np.e**(outVal)*((A*np.e**(innVal))+(B*np.e**(-1*innVal)))
 	else:
 		return
+
+def makePlot(A,B,w,t,eta):
+	for e in eta:
+		currentVal=current(A,B,w,t,e)
+		plt.plot(currentVal,t)
+	plt.savefig('plots.png')
+
+if __name__=='__main__':
+	A=1
+	B=1#we assume the constants to be 1
+	w=12#the value of natural frequency which we consider
+	t=np.linspace(0,10,num=100)#the range of time values
+	eta=[0.5,1,1.5]
+	makePlot(A,B,w,t,eta)
