@@ -14,8 +14,8 @@ class TestCurrent(ut.TestCase):
 	def test_checkOverDamped(self):
 		self.assertEqual(current(1,1,12,np.linspace(0,2,num=10),1.5)[0],2.0)
 	def test_checkPlotting(self):
-		makePlot(1,1,12,np.linspace(0,2,num=10),[1.5])
-		self.assertTrue(os.path.isfile('./plots.png'))
-		os.remove('./plots.png')
+		makePlot(1,1,12,np.linspace(0,2,num=10),[1.5],'test')
+		self.assertTrue(os.path.isfile('./test.png'))
+		os.remove('./test.png')
 if __name__=='__main__':
 	ut.main()
