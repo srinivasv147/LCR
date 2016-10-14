@@ -3,7 +3,9 @@
 \usepackage{hyperref}
 \usepackage{color}
 \usepackage{graphicx}
+\usepackage{cite}
 \begin{document}
+\bibliographystyle{plain}
 \hypersetup{pageanchor=false}
 \title{Analysis Of An LC Tank With Resistance}
 \author{Srinivas Vaidyanathan \\ 130010033 Aerospace Engineering}
@@ -18,14 +20,14 @@
 \end{abstract}
 \hypersetup{pageanchor=false}
 \section{Circuit description and analysis}
-Figure \ref{fig:circuit} shows the circuit we are about to analyse.
+Figure \ref{fig:circuit} shows the circuit we are about to analyse ~\cite{mit:pres}.
 \begin{figure}[h!]
 \includegraphics[width=\linewidth]{lcr.jpg}
 \caption{The LCR circuit (130010033)}
 \label{fig:circuit}
 \end{figure}\\
 The circuit consists of an inductor of inductance L, a capacitor of capacitance C and a resistance of resistance R.
-We start By applying the Kirchhoff's Voltage rule across the circuit. This gives us the following expression.
+We start By applying the Kirchhoff's Voltage rule across the circuit. This gives us the following expression ~\cite{wiki:LCR}.
 \begin{equation}
 L\frac{dI}{dt}+\frac{Q}{C}+IR=0
 \label{init:equation}
@@ -84,4 +86,5 @@ these cases are shown below.
 \caption{The current vs time plot (130010033)}
 \label{fig:plot}
 \end{figure}
+\bibliography{sources}
 \end{document}
