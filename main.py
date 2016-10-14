@@ -42,7 +42,7 @@ def makePlot(A,B,w,t,eta,s):
 	# plt.show()
 	plt.savefig(s+'.png')
 
-def animate(A,B,w,t,eta):
+def animate(A,B,w,t,eta,s):
 	FFMpegWriter = manimation.writers['ffmpeg']
 	metadata = dict(title='Current vs time', artist='Matplotlib',
                 comment='Movie support!')
@@ -51,7 +51,7 @@ def animate(A,B,w,t,eta):
 	l, = plt.plot([], [],'-o',lw=2)
 	plt.xlim(0, 5)
 	plt.ylim(-2, 2)
-	with writer.saving(fig, "plot_130010033"+str(eta)+".mp4", 100):
+	with writer.saving(fig, s+"130010033_eta="+str(eta)+".mp4", 100):
 		for time in t:
 			# print current(A,B,w,time,eta)
 			l.set_data(time,current(A,B,w,time,eta))
@@ -64,4 +64,4 @@ if __name__=='__main__':
 	t=np.linspace(0,1,num=100)#the range of time values
 	eta=[0.5,1,1.5,2.5]
 	makePlot(A,B,w,t,eta,'plots')
-	animate(A,B,w,t,0.5)
+	animate(A,B,w,t,0.5,'plots')

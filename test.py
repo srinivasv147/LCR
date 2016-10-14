@@ -1,4 +1,4 @@
-from main import current,makePlot
+from main import current,makePlot,animate
 import unittest as ut
 import numpy as np
 import os
@@ -17,5 +17,9 @@ class TestCurrent(ut.TestCase):
 		makePlot(1,1,12,np.linspace(0,2,num=10),[1.5],'test')
 		self.assertTrue(os.path.isfile('./test.png'))
 		os.remove('./test.png')
+	def test_checkAnimation(self):
+		animate(1,1,12,np.linspace(0,2,num=10),1.5,'test')
+		self.assertTrue(os.path.isfile('test130010033_eta=1.5.mp4'))
+		os.remove('test130010033_eta=1.5.mp4')
 if __name__=='__main__':
 	ut.main()
