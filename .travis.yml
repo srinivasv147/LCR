@@ -1,3 +1,3 @@
 language: python
 	  - "2.7"
-script: make test
+script: "python ./source/test.py"
