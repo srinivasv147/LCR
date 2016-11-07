@@ -8,15 +8,15 @@ The Goal of this project is to show one way to publish reproducible research
 
 The Dependencies
 =
-numpy
-matplotlib
-unittest
-ffmpeg
+numpy<br>
+matplotlib<br>
+unittest<br>
+ffmpeg<br>
 
 Instructions to run
 =
-Once the dependencies are met run make.
+Once the dependencies are met run *make*.
 
 Instructions to test
 =
-run make test
+run make *test*.
