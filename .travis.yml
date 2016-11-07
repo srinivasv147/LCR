@@ -4,6 +4,6 @@ sudo: required
 install:
   - pip install numpy
   - pip install matplotlib
-  - sudo add-apt-repository ppa:mc3man/trusty-media
+  - sudo add-apt-repository ppa:mc3man/trusty-media -y
   - sudo apt-get install ffmpeg
 script: "python ./source/test.py"
