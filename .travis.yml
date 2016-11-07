@@ -4,4 +4,5 @@ sudo: required
 install:
   - pip install numpy
   - pip install matplotlib
+  - add-apt-repository ppa:mc3man/trusty-media
 script: "python ./source/test.py"
